@@ -1,3 +1,4 @@
+#Creation of tree code in py
 class TREE:
     def __init__(self,data,children=[]):
         self.data=data
