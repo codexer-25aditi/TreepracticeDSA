@@ -1,4 +1,5 @@
 #Creation of binary tree using LL
+#Preorder , Inorder and Postorder traversal
 class TreeNodes:
     def __init__(self,data):
         self.data=data
