@@ -1,5 +1,4 @@
 #Creation of binary tree using LL
-#Preorder , Inorder and Postorder traversal
 class TreeNodes:
     def __init__(self,data):
         self.data=data
@@ -47,3 +46,20 @@ def PostOrderTraversal(rootnode):
     print(rootnode.data)
 
 PostOrderTraversal(bsT)
+
+def LevelOrderTraversal(rootnode):
+    if not rootnode:
+        return
+    queue=[]
+    queue.append(rootnode)
+
+    while(len(queue)>0):
+        print(queue[0].data,end=" ")
+        node=queue.pop()
+        if node.leftChild is not None:
+            queue.append(node.leftChild)
+        elif node.RightChild is not None:
+            queue.append(node.RightChild)
+print("LevelOrderTraversal:")
+
+LevelOrderTraversal(bsT)
